@@ -1,0 +1,34 @@
+
+Answer 1
+
+Select dept_no, dept_name, dept_manager, address_id, city, state, emp_no, emp_name, emp_sal
+From address 
+inner join department on department.address_id = address.address_id
+Inner join employee on employee.dept_no = department.dept_no
+
+create table bankaccount (acc_no int primary key, acc_opened_date date,st
+atus text,balance double)
+
+Answer 2
+
+1. create table bankaccount (acc_no int primary key, acc_opened_date date,st
+atus text,balance double) ;
+
+
+2. create table transaction(acc_no int, trans_type text,trans_date date,trans_amount double,foreign key(acc_no) references bankaccount (acc_no) on delete cascade);
+
+Answer 3
+
+1. create table employee (emp_no int, emp_name text, emp_sal decimal, department text, manager_name text);
+
+insert into employee values (23, 'charan', 45000, 'IT', 'ABC');
+insert into employee values (24, 'karan', 55000, 'IT', 'ABC');
+insert into employee values (04, 'aman', 55000, 'CS', 'XYZ');
+insert into employee values (54, 'parush', 55000, 'CS', 'XYZ');
+
+select manager_name, sum(emp_sal) from employee group by manager_name;
+
+2. select min(emp_sal) as min_sal from (select distinct emp_sal from employee order by
+emp_sal desc limit 4) as salaries;
+
+
