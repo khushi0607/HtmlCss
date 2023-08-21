@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <style>
+            .zoom:hover {
+                    -ms-transform: scale(1.5); /* IE 9 */
+                    -webkit-transform: scale(1.5); /* Safari 3-8 */
+                    transform: scale(1.5); 
+            }
+        </style>
+    </head>
+    <body style="margin-top:100px">
+        <img src="img.webp" style="width:350; padding:20px" class="zoom">
+        <img src="img.webp" style="width:350;padding:20px" class="zoom">
+        <img src="img.webp" style="width:350;padding:20px" class="zoom">
+        <img src="img.webp" style="width:350;padding:20px" class="zoom">
+        
+    </body>
+</html>
+
+<html>
+    <head>
+        
+    </head>
+    <body>
+
+        <h1 style="border:2px solid black; margin:10px;padding:10px;">REGISTERATION FORM</h1>
+
+        <form style="border:2px solid black; margin:10px;padding:10px;">
+        <div style="font-size:25px;">
+        <table>
+            <br>
+            <!--First Name-->
+            <tr>
+            <label>First Name:</label>
+                <input type="text" placeholder="first name" required ><br><br>
+            </tr>
+            
+            <tr>
+            <!--Last Name-->
+            <label>Last Name:</label>
+                <input type="text" placeholder="second name" required><br><br>
+            </tr>
+
+            <tr>
+            <!--Mobile-->
+            <label>Mobile:</label> 
+                <input type="tel" placeholder="mobile number" maxlength="10" required>
+                <br><br>
+            </tr>
+            
+            <tr>
+            <!--email-->
+            <label>Email: </label>
+                <input type="email" pattern="@" placeholder="email" required>
+                <br><br>
+            </tr>
+
+
+            <tr>
+            <!--Dob-->
+            <label>DOB:</label>
+                <input type="date" required><br><br>
+            </tr>
+
+            <tr>
+            <!--Password-->
+            <label>Password:</label>
+                <input type="password" placeholder="password" required><br><br>
+            </tr>
+
+            <tr>
+                <!--Country-->
+                <label>Country :</label>
+                <select required>
+                    <option>India</option>
+                    <option>Nepal</option>
+                    <option>Sri Lanka</option>
+                    <option>USA</option>
+                </select>
+                <br>
+                <br>
+            </tr>
+
+            <tr>
+                <!--Qualification-->
+            <label>Qualifictaion:</label>
+                <label style="margin-left:7px">B.Tech</label>
+                <input type="checkbox" checked="checked" required>
+                <div style="margin-left:150px">
+                    <label>B.Com</label>
+                    <input type="checkbox">
+                </div>
+                <div style="margin-left:150px">
+                    <label>B.Pharma</label>
+                    <input type="checkbox"><br><br>
+                </div>
+            </tr>
+
+            <tr>
+                <!--Gender-->
+                <label>Gender :</label>
+                <label style="margin-left:7px">Male</label> 
+                <input type="radio" name="gender" required>
+                <div style="margin-left:100px">
+                    Female <input type="radio" name="gender">
+                </div>
+                <br>
+            </tr>
+
+            <tr>
+            <input type="submit" value="Register" style="font-size:25px;">
+
+            <input type="reset" value="Cancel" style="font-size:25px;">
+            </tr>
+        </div>   
+    </table>
+        </form>
+
+    </body>
+</html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="third_css.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>!</td>
+                <td>@</td>
+                <td>#</td>
+            </tr>
+            <tr>
+                <td>.</td>
+                <td>,</td>
+                <td>/</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+table, th, td {
+    border: 1px solid black;
+    width:50%;
+    }
