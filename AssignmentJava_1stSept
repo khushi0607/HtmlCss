@@ -141,12 +141,12 @@ public class Bookstore {
         return b;
     }
 
-    public Book searchByAuthor(String title)
+    public Book searchByAuthor(String author)
     {
         Book b=null;
 
         try(Connection con = DriverManager.getConnection(url,"root","@Khushi00");
-            PreparedStatement pst = con.prepareStatement("select * from Book where Author=?");){
+            PreparedStatement pst = con.prepareStatement("select * from book where author=?");){
 
             pst.setString(1,title);
             ResultSet rs= pst.executeQuery();
@@ -164,7 +164,7 @@ public class Bookstore {
         ArrayList<Book> booklist = new ArrayList<>();
 
         try(Connection con = DriverManager.getConnection(url,"root","@Khushi00");
-            PreparedStatement pst = con.prepareStatement("select * from Book");){
+            PreparedStatement pst = con.prepareStatement("select * from book");){
 
             ResultSet rs= pst.executeQuery();
             while(rs.next()){
@@ -234,7 +234,7 @@ public class BookUtil {
 
         System.out.println("Enter author name to find the book details");
         String author=sc.next();
-        Book b2=bookstore.searchByTitle(author);
+        Book b2=bookstore.searchByAuthor(author);
         System.out.println(b2.toString());
 
         ArrayList<Book> books=bookstore.getAllBooks();
