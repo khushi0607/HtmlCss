@@ -84,8 +84,8 @@ public class Book {
         this.price = price;
     }
     
-    public String toString(Book b){
-        return b.getBookId()+" "+b.getTitle()+" "+b.getAuthor()+" "+b.getCategory()+" "+b.getPrice();
+    public String toString(){
+        return bookId+" "+title+" "+author+" "+category+" "+price;
     }
 }
 
@@ -239,7 +239,7 @@ public class BookUtil {
 
         ArrayList<Book> books=bookstore.getAllBooks();
         for(Book b3: books){
-            System.out.println(b3.toString(b3));
+            System.out.println(b3.toString());
         }
     }
 }
