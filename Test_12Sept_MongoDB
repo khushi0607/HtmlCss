@@ -1,0 +1,29 @@
+--------------------------Ques 01-------------------------------------------------------
+
+db.createCollection("Employe");
+db.Employe.insertOne({"name":"john smith","position":"software engineer","department":"engineering","salary":85000,"hire date":"January15,2023"});
+
+--------------------------Ques 02-------------------------------------------------------
+
+ db.Employe.updateMany({"position":"software engineer"},{$set:{"salary":90000}});
+
+--------------------------Ques 03-------------------------------------------------------
+
+ db.Employe.find({[{"department":"engineering"},{"salary":{$gt:80000}}]});
+
+--------------------------Ques 04-------------------------------------------------------
+
+ db.Employe.deleteMany({"department":"marketing"});
+
+--------------------------Ques 05-------------------------------------------------------
+
+ db.createCollection("orders");
+db.orders.insertOne({"order_date":"2023-07-06","total_price":99,"order_by":"Gainsight"});
+db.orders.aggregate([{$match:{order_date:{$gte:"2023-04-06",$lte: "2023-07-06"}}},{$group:{ _id:null,totrev:{$sum:"$total_price"}}}]);
+
+--------------------------Ques 06--------------------------------------------------------
+
+db.createCollection("product");
+db.product.insertOne({"product_code":1,"product_name":"headset","product_category":"gadgets","product_price":2000,"product_quantity":8})
+db.product.createIndex({"product_code":1});
+db.product.getIndexes();
